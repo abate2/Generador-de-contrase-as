@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador Personalizado de Contraseñas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="toggle-theme">🌙 Cambiar Tema</button>
+
+    <h2>🔐 Generador de Contraseñas</h2>
+    
+    <form id="userForm">
+      <label for="nombre">¿Cuál es tu nombre?</label>
+      <input type="text" id="nombre" required />
+
+      <label for="color">Color favorito:</label>
+      <input type="text" id="color" required />
+
+      <label for="ciudad">Ciudad donde naciste:</label>
+      <input type="text" id="ciudad" required />
+
+      <label for="animal">Animal favorito:</label>
+      <input type="text" id="animal" required />
+
+      <button type="submit">Generar Contraseña</button>
+    </form>
+
+    <div id="resultado" style="display:none;">
+      <div id="historial">
+       <h4>Últimas 5 contraseñas generadas:</h4>
+       <ul id="listaHistorial"></ul>
+      </div>  
+      <h3 id="saludo"></h3>
+      <p>Tu contraseña segura es:</p>
+      <input type="text" id="password" readonly />
+      <div id="strength"></div>
+      <br />
+      <button onclick="copyPassword()">Copiar</button>
+      <div class="copy-msg" id="copyMsg">¡Contraseña copiada!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
